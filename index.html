@@ -1,1 +1,43 @@
-<h1> Under construction at this point, check back in a few days. </h1>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10151b">
+  <meta name="description" content="Personal telemetry dashboard">
+  <title>Life / Telemetry</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./js/app.js"></script>
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar" aria-label="Dashboard navigation">
+      <a class="brand" href="./index.html"><span class="brand-icon" aria-hidden="true">⌁</span><span>LIFE<span class="brand-separator"> / </span>TELEMETRY<small>PERSONAL OBSERVABILITY</small></span></a>
+      <nav class="navigation" aria-label="Sections">
+        <a class="nav-link active" href="#overview">01 <span>Overview</span></a>
+        <a class="nav-link" href="#activity">02 <span>Activity</span></a>
+        <a class="nav-link" href="#recovery">03 <span>Recovery</span></a>
+      </nav>
+      <div class="sidebar-bottom"><span class="small-label">DATA SOURCE</span><strong>GARMIN / API</strong><span class="version">BUILD 0.1.0</span></div>
+    </aside>
+
+    <main id="overview" class="main">
+      <header class="topbar"><span class="breadcrumb">SYSTEM <span>/</span> OVERVIEW</span><div class="connection"><span id="status-dot" class="status-dot"></span><span id="status-text" role="status" aria-live="polite">INITIALIZING</span></div></header>
+      <div class="page-intro"><div><p class="eyebrow">PERSONAL TELEMETRY / DAILY SNAPSHOT</p><h1>Daily overview<span class="cursor">_</span></h1><p class="description">A small window into everyday patterns.</p></div><div class="date-block"><span class="small-label">LATEST SNAPSHOT</span><time id="updated-at">—</time></div></div>
+
+      <section class="metric-grid" aria-label="Current metrics">
+        <article class="metric-card accent-steps"><div class="metric-heading"><span>01 / STEPS</span><span class="metric-symbol">↗</span></div><div class="metric-value"><strong id="steps-value">—</strong><span>steps</span></div><div class="metric-footer"><div><span class="small-label">7D AVERAGE</span><strong id="steps-average">—</strong></div><div class="comparison"><span class="small-label">VS 7D AVG</span><strong id="steps-delta">—</strong></div></div></article>
+        <article class="metric-card accent-sleep"><div class="metric-heading"><span>02 / SLEEP SCORE</span><span class="metric-symbol">☾</span></div><div class="metric-value"><strong id="sleep-value">—</strong><span>/ 100</span></div><div class="metric-footer"><div><span class="small-label">7D AVERAGE</span><strong id="sleep-average">—</strong></div><div class="comparison"><span class="small-label">VS 7D AVG</span><strong id="sleep-delta">—</strong></div></div></article>
+        <article class="metric-card accent-battery"><div class="metric-heading"><span>03 / BODY BATTERY</span><span class="metric-symbol">ϟ</span></div><div class="metric-value"><strong id="battery-value">—</strong><span>/ 100</span></div><div class="metric-footer"><div><span class="small-label">7D AVG AT THIS HOUR</span><strong id="battery-average">—</strong></div><div class="comparison"><span class="small-label">VS 7D AVG</span><strong id="battery-delta">—</strong></div></div></article>
+        <article class="metric-card accent-heart"><div class="metric-heading"><span>04 / RESTING HEART RATE</span><span class="metric-symbol">♡</span></div><div class="metric-value"><strong id="heart-value">—</strong><span>bpm</span></div><div class="metric-footer"><div><span class="small-label">7D AVERAGE</span><strong id="heart-average">— bpm</strong></div><div class="comparison"><span class="small-label">VS 7D AVG</span><strong id="heart-delta">—</strong></div></div></article>
+      </section>
+
+      <section class="chart-grid" aria-label="Telemetry history">
+        <article id="activity" class="panel"><div class="panel-header"><div><p class="eyebrow">ACTIVITY / DAILY</p><h2>Step history</h2></div><div class="panel-average"><span class="small-label">7D AVG</span><strong id="steps-chart-average">—</strong></div></div><div class="legend"><span><i class="legend-swatch steps-swatch"></i>Daily steps</span><span><i class="legend-line"></i>7D average</span></div><div id="steps-chart" class="chart" role="img" aria-label="Daily steps chart with seven-day average"></div><div class="axis-footer"><span>Y · STEPS / DAY</span><span>X · DATE</span></div></article>
+        <article id="recovery" class="panel"><div class="panel-header"><div><p class="eyebrow">RECOVERY / HOURLY</p><h2>Body Battery</h2></div><div class="panel-average"><span class="small-label">24H MEAN</span><strong id="battery-chart-average">—</strong></div></div><div class="legend"><span><i class="legend-swatch battery-swatch"></i>Battery level</span><span><i class="legend-line"></i>24H mean</span></div><div id="battery-chart" class="chart" role="img" aria-label="Body Battery throughout the last 24 hours"></div><div class="axis-footer"><span>Y · LEVEL / 100</span><span>X · LOCAL TIME</span></div></article>
+      </section>
+      <footer class="footer"><span id="data-note">Waiting for data.</span><span>NO TRACKING · JUST NUMBERS</span></footer>
+    </main>
+  </div>
+</body>
+</html>

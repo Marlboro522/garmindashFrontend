@@ -1,0 +1,47 @@
+{
+  "updatedAt": "2026-11-18T11:00:00-07:00",
+  "metrics": {
+    "steps": {
+      "current": 8426,
+      "average7d": 7190
+    },
+    "sleepScore": {
+      "current": 86,
+      "average7d": 81
+    },
+    "bodyBattery": {
+      "current": 72,
+      "average7d": 66
+    },
+    "restingHeartRate": {
+      "current": 54,
+      "average7d": 56
+    }
+  },
+  "history": {
+    "steps7d": [
+      { "date": "2026-11-12", "value": 7021 },
+      { "date": "2026-11-13", "value": 8642 },
+      { "date": "2026-11-14", "value": 5544 },
+      { "date": "2026-11-15", "value": 9118 },
+      { "date": "2026-11-16", "value": 6307 },
+      { "date": "2026-11-17", "value": 7623 },
+      { "date": "2026-11-18", "value": 8426 }
+    ],
+    "bodyBattery24h": [
+      { "time": "00:00", "value": 22 },
+      { "time": "02:00", "value": 34 },
+      { "time": "04:00", "value": 52 },
+      { "time": "06:00", "value": 78 },
+      { "time": "08:00", "value": 94 },
+      { "time": "10:00", "value": 89 },
+      { "time": "12:00", "value": 82 },
+      { "time": "14:00", "value": 76 },
+      { "time": "16:00", "value": 64 },
+      { "time": "18:00", "value": 57 },
+      { "time": "20:00", "value": 45 },
+      { "time": "22:00", "value": 36 },
+      { "time": "23:59", "value": 30 }
+    ]
+  }
+}
